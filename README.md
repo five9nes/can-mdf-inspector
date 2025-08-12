@@ -23,12 +23,14 @@ A CLI tool to inspect and decode CAN log data from `.MF4` files. Built for engin
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## 🚀 Usage
 python3 list_can_ids.py <your_file.MF4> [-d your_file.dbc] [--csv [output.csv]] [--sort id|name]
 
 ## 🔧 Examples
 
+```bash
 # Basic: just list unique CAN IDs
 python3 list_can_ids.py logs/test.mf4
 
@@ -43,6 +45,7 @@ python3 list_can_ids.py logs/test.mf4 --csv decoded_ids.csv
 
 # Sort results by signal name
 python3 list_can_ids.py logs/test.mf4 -d j1939.dbc --sort name
+```
 
 ## 📋 Output Fields (CSV)
 
@@ -56,13 +59,10 @@ python3 list_can_ids.py logs/test.mf4 -d j1939.dbc --sort name
 
 ## 🧠 Future Enhancements
 
---include-data: Output timestamped raw CAN payloads
-
-PGN → full J1939 breakdown (priority, SA, DA)
-
-JSON export support
-
-PyPI packaging: pip install can-mdf-inspector
+- `--include-data`: Output timestamped raw CAN payloads
+- PGN → full J1939 breakdown (priority, SA, DA)
+- JSON export support
+- PyPI packaging: pip install can-mdf-inspector
 
 ## 📝 License
 
